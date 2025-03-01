@@ -15,14 +15,14 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Página inicial'),
-        backgroundColor: Colors.deepOrange,
-      ),
+      // appBar: AppBar(
+      //   title: const Text('Página inicial'),
+      //   backgroundColor: Colors.deepOrange,
+      // ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.red, Colors.purple],
+            colors: [Color(0xFFB3E5FC), Color(0xFFE1F5FE)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -73,11 +73,12 @@ Widget buildButtonColumn(BuildContext context, List<String> labels, {bool isCirc
   );
 }
 
-Widget buildButton(String text, BuildContext context, {double width = 400, double height = 75, Color color = Colors.purple}) {
+Widget buildButton(String text, BuildContext context, {double width = 400, double height = 75, Color color = Colors.orange}) {
   return SizedBox(
     width: width,
     height: height,
     child: ElevatedButton(
+      onHover: ,
       onPressed: () => handleButtonPress(text, context),
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
