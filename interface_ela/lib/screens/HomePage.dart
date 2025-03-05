@@ -78,7 +78,6 @@ Widget buildButton(String text, BuildContext context, {double width = 400, doubl
     width: width,
     height: height,
     child: ElevatedButton(
-      onHover: ,
       onPressed: () => handleButtonPress(text, context),
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
