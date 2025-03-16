@@ -10,13 +10,13 @@ class WindowControlScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Janelas'),
-        backgroundColor: Colors.deepOrange,
+        title: const Text('Controle de Janelas'),
+        backgroundColor: Color(0xFFB3E5FC),
       ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.red, Colors.purple],
+            colors: [Color(0xFFB3E5FC), Color(0xFFE1F5FE)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -40,7 +40,7 @@ class WindowControlScreen extends StatelessWidget {
                 'PÁGINA INICIAL',
                 'CONFIGURAÇÕES',
                 'EMERGENCIA',
-              ], isCircular: true, colors: [Colors.yellow, Colors.blue, Colors.red])
+              ], isCircular: true, colors: [Colors.grey, Colors.blue, Colors.red])
             ],
           ),
         ),

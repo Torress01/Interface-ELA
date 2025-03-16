@@ -87,7 +87,8 @@ Widget buildButton(String text, BuildContext context, {double width = 400, doubl
       ),
       child: Text(
         text,
-        style: const TextStyle(color: Colors.white, fontSize: 18),
+        textAlign: TextAlign.center,
+        style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
       ),
     ),
   );
@@ -108,7 +109,7 @@ Widget buildCircularButton(String text, BuildContext context, {double diameter =
       child: Text(
         text,
         textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white, fontSize: 16),
+        style: const TextStyle(color: Colors.white,  fontSize: 30, fontWeight: FontWeight.bold),
       ),
     ),
   );
@@ -136,9 +137,9 @@ void handleButtonPress(String text, BuildContext context) {
       break;
     case 'EMERGENCIA':
       TelegramAPI.sendMessageGroup('----- Preciso de ajuda, emergencia!!! -----').then((success) {
-        if (success) {
-          showEmergencyDialog(context);
-        }
+      // if(success){
+        showEmergencyDialog(context);
+      // }
       });
       break;
     case 'MENSAGENS RÁPIDAS':
@@ -220,13 +221,12 @@ void showEmergencyDialog(BuildContext context) { // caixa de emergencia
   showDialog(
     context: context,
     builder: (BuildContext context) {
-      // Define a Future para fechar o diálogo após 2 segundos
       Future.delayed(const Duration(seconds: 1), () {
         Navigator.of(context).pop(true);
       });
 
       return AlertDialog(
-        backgroundColor: Colors.purple.withOpacity(0.8),
+        backgroundColor: Colors.red.withOpacity(0.8),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(100.0),
         ),

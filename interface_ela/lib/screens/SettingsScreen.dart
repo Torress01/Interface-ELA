@@ -11,12 +11,12 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Configurações do Comunicador'),
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Color(0xFFB3E5FC),
       ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.red, Colors.purple],
+            colors: [Color(0xFFB3E5FC), Color(0xFFE1F5FE)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),

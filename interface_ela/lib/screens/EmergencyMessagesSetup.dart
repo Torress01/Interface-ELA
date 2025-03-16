@@ -8,10 +8,10 @@ class EmergencyMessagesSetup extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Mensagens de Emergência'),
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Color(0xFFB3E5FC),
       ),
       body: const Center(
-        child: Text('Conteúdo de Configuracao Mensagens de Emergência'),
+        child: Text('"Conteúdo de Configuracao Mensagens de Emergência"'),
       ),
     );
   }
